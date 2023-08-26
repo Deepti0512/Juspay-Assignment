@@ -4,8 +4,9 @@ Objective: To implement functionality similar to React useState hook without usi
 
 _Features_
 
--It uses local storage to preserve the state
--It uses stateManager class and subscriber method
+- It uses local storage to preserve the state
+- It uses stateManager class and subscriber method
+- Multiple state components are there
 
 Screenshots:
 

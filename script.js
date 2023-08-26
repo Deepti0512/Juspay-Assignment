@@ -11,7 +11,6 @@ class StateManager {
   setState(newState) {
     this.state = newState;
     this.notifySubscribers();
-    localStorage.setItem("counter", newState);
   }
 
   subscribe(subscriber) {
@@ -37,14 +36,25 @@ class Renderer {
   }
 
   update(newState) {
-    this.element.textContent = `Counter: ${newState}`;
+    this.element.textContent = `${newState}`;
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const counter = parseInt(localStorage.getItem("counter")) || 0;
   const counterManager = new StateManager(counter);
+  const text = localStorage.getItem("text") || "Hello";
+  const textManager = new StateManager(text);
 
+  const appRenderer2 = new Renderer("app", textManager);
+  const toggleButton = document.getElementById("toggleButton");
+
+  toggleButton.addEventListener("click", () => {
+    const currentState = textManager.getState();
+    const newState = currentState === "Hello" ? "Bye" : "Hello";
+    textManager.setState(newState);
+    localStorage.setItem("text", newState);
+  });
   const appRenderer = new Renderer("counter", counterManager);
   const incrementButton = document.getElementById("incrementButton");
   const decrementButton = document.getElementById("decrementButton");
@@ -54,19 +64,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentState = counterManager.getState();
     const newState = currentState + 1;
     counterManager.setState(newState);
+    localStorage.setItem("counter", newState);
   });
 
   decrementButton.addEventListener("click", () => {
     const currentState = counterManager.getState();
     const newState = currentState - 1;
     counterManager.setState(newState);
+    localStorage.setItem("counter", newState);
   });
 
   resetButton.addEventListener("click", () => {
     const newState = 0;
     counterManager.setState(newState);
+    localStorage.setItem("counter", newState);
   });
 
   // Initial render
   appRenderer.update(counter);
+  appRenderer2.update(text);
 });

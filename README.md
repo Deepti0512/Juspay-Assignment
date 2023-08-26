@@ -1,2 +1,4 @@
 # Juspay-Assignment
-This is an attempt to implement the React useState hook functionality without using React, just vanilla Javascript.
+Objective: To implement functionality similar to React useState hook without using React and only Vanilla Javascript.
+
+[Demo link](https://deepti0512.github.io/Juspay-Assignment/)

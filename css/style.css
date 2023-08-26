@@ -3,10 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
-    background-color: rgb(16, 16, 67);
-    color:white;
-} */
+body{
+    background-color: rgb(23, 23, 98);
+    color:#ccc;
+}
 .heading{
     text-align: center;
     margin: 20px;

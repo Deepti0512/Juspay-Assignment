@@ -21,7 +21,6 @@ const toggleBtn = document.getElementById("toggleButton");
 toggleBtn.addEventListener("click", () => {
   let App = React.render(wrapper);
   App.click();
-  App.render();
-  App = React.render(wrapper);
+//   App = React.render(wrapper);
 });
 

@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mimic React</title>
+    <title>Local Storage Example</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <h2 class="heading">
-      Implementing React's useState hook functionality using plain Javascript.
+      Implementation of useState functionality using stateManager and subsriber
     </h2>
     <div class="styling-container">
       <div class="container">
-        <h1 id="app">Helloo!!</h1>
-        <button id="toggleButton" class="btn">Toggle</button>
+        <div id="counter">0</div>
+        <button id="incrementButton" class="btn">Increment Counter</button>
+        <button id="decrementButton" class="btn">Decrement Counter</button>
+        <button id="resetButton" class="btn">Reset Counter</button>
       </div>
     </div>
-
-    <script src="Component.js" type="module"></script>
+    <script src="script.js"></script>
   </body>
 </html>

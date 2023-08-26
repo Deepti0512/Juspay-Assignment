@@ -10,7 +10,7 @@ body{
 .heading{
     text-align: center;
     margin: 20px;
-    font-size: 30px;
+    /* font-size: 30px; */
     font-weight: bold;
 }
 .styling-container{
@@ -50,4 +50,16 @@ body{
     font-size: 40px;
     font-weight: bold;
     margin: 10px;
+}
+.features{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+li{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
